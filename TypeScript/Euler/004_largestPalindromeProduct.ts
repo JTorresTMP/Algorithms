@@ -16,7 +16,7 @@ console.log(isPalindrome(343));
 
 // Max 3 Digit Number === 999, need to work backwards
 
-const calculateProducts = (n: number) => {
+const getLargestPalindromeProductFrom = (n: number) => {
     const productPalindromeArray: number[] = [];
     const cache = new Set();
 
@@ -43,4 +43,4 @@ const calculateProducts = (n: number) => {
     return sortedProductArray[0];
 }
 
-console.log(calculateProducts(999))
+console.log(getLargestPalindromeProductFrom(999))
