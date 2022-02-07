@@ -31,7 +31,7 @@ What is the largest prime factor of the number 600851475143?
 
 // currentMax, re assign this variable as needed and return at the end
 
-const isPrime = (n: number) => {
+export const isPrime = (n: number) => {
     for (let i = 2; i < Math.sqrt(n); i++) {
         if (n % i === 0) {
             // console.log(`Number ${n} is divisible by ${i}`)
@@ -67,4 +67,4 @@ const getLargestPrimeFactor = (n: number) => {
     return maxPrimeFactor;
 }
 
-console.log(getLargestPrimeFactor(600851475143));
+// console.log(getLargestPrimeFactor(600851475143));
