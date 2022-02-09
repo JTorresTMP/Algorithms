@@ -8,7 +8,6 @@ What is the 10 001st prime number?
 // Have a counter that increases by 1 every time a prime number is encountered
 // while counter is not 10001 keep going
 // exit immediately and return if counter === 10001
-import { isPrime } from './003_largestPrimeFactors';
 
 const isPrimeV2 = (n: number) => {
     for (let i = 2; i <= Math.sqrt(n); i++) {
@@ -20,24 +19,21 @@ const isPrimeV2 = (n: number) => {
     return true;
 }
 
-// console.log(isPrimeV2(3))
-
-
 const findNthPrime = (n: number) => {
     if (n < 1) throw new Error('Number must be 1 or greater than 1');
     let primeCounter = 1;
     let currentNumber = 2;
 
-    while (primeCounter !== n) {
-        // console.log(`Prime counter: ${primeCounter} & Current Value: ${currentNumber}`)
-        // if (isPrimeV2(currentNumber)) {
-        //     if (primeCounter === n) {
-        //         return currentNumber;
-        //     }
-        //     primeCounter++;
-        //     currentNumber++
-        // }
-        // currentNumber++
+    while (primeCounter < (n + 1)) {
+        if (isPrimeV2(currentNumber)) {
+            if (primeCounter === n) {
+                return currentNumber;
+            }
+            primeCounter++;
+            currentNumber++;
+        } else {
+            currentNumber++;
+        }
     }
 
     console.log(primeCounter)
@@ -45,4 +41,4 @@ const findNthPrime = (n: number) => {
     return -1;
 }
 
-console.log(findNthPrime(3))
+console.log(`Returned: ${findNthPrime(10001)}`)
