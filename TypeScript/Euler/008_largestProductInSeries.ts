@@ -30,6 +30,7 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 
 const findAdjacentNumbers = (length: number, series: number) => {
     const sequence: number[] = [];
+    // committing for streak
 
     return;
 }
