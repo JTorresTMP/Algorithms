@@ -34,3 +34,5 @@ const findAdjacentNumbers = (length: number, series: number) => {
 
     return;
 }
+
+// no time for this today either :(
