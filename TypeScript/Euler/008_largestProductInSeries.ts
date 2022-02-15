@@ -35,4 +35,4 @@ const findAdjacentNumbers = (length: number, series: number) => {
     return;
 }
 
-// will get to this later, maybe
+// mega rip, need to finish the SSIS package today
