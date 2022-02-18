@@ -36,3 +36,4 @@ const findAdjacentNumbers = (length: number, series: number) => {
 }
 
 // almost forgot about this
+// need to look into MySQL upgrade preparations/strategy
