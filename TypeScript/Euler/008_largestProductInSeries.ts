@@ -29,8 +29,13 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 // exceed 1. E.g. 7, 8, 8, 7, 8
 
 const findAdjacentNumbers = (length: number, series: number) => {
-    const sequence: number[] = [];
+    const sequences: number[][] = [];
     // committing for streak
+    // Forgot to push yesterday :(
+
+    // for (let number of series.toString().split('')) {
+    //     console.log(number)
+    // }
 
     return;
 }
