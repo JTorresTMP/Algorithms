@@ -28,17 +28,30 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 // Adjacent numbers are defined as numbers where the delta between them does not
 // exceed 1. E.g. 7, 8, 8, 7, 8
 
+const isAdjacentNumber = (number1: number, number2: number) => {
+    return Math.abs(number1 -  number2) === 1;
+}
+
+const testInput = 556938874;
+
 const findAdjacentNumbers = (length: number, series: number) => {
     const sequences: number[][] = [];
     // committing for streak
     // Forgot to push yesterday :(
+    const stringSeries = series.toString();
+    let leftPointer = 0;
+    let rightPointer = leftPointer + 1;
 
-    // for (let number of series.toString().split('')) {
-    //     console.log(number)
-    // }
+    for (let i = leftPointer; i < stringSeries.length; i++) {
+        const localSequence: number[] = [];
+        console.log(stringSeries[i])
+        while (isAdjacentNumber(stringSeries[leftPointer], stringSeries[rightPointer]))
+    }
 
     return;
 }
+
+console.log(findAdjacentNumbers(1, testInput))
 
 // almost forgot about this
 // need to look into MySQL upgrade preparations/strategy
