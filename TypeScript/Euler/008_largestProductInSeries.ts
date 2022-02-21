@@ -29,29 +29,42 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 // exceed 1. E.g. 7, 8, 8, 7, 8
 
 const isAdjacentNumber = (number1: number, number2: number) => {
-    return Math.abs(number1 -  number2) === 1;
+    return Math.abs(number1 -  number2) <= 1;
 }
 
 const testInput = 556938874;
 
 const findAdjacentNumbers = (length: number, series: number) => {
     const sequences: number[][] = [];
-    // committing for streak
-    // Forgot to push yesterday :(
     const stringSeries = series.toString();
     let leftPointer = 0;
     let rightPointer = leftPointer + 1;
 
     for (let i = leftPointer; i < stringSeries.length; i++) {
         const localSequence: number[] = [];
-        console.log(stringSeries[i])
-        // while (isAdjacentNumber(stringSeries[leftPointer], stringSeries[rightPointer]))
+        console.log(`Current Index: ${i}`)
+        console.log(`
+        Current Left: ${leftPointer},
+        Current Right: ${rightPointer}
+        `)
+        while (isAdjacentNumber(parseInt(stringSeries[leftPointer]), parseInt(stringSeries[rightPointer]))) {
+            localSequence.push(parseInt(stringSeries[leftPointer]));
+            leftPointer++
+        }
+        leftPointer = i + 1;
+        rightPointer = leftPointer + 1;
+
+        console.log(localSequence)
+        localSequence.length > 1 ? sequences.push(localSequence) : null; // do nothing
     }
 
-    return;
+    console.log('All Sequences')
+    console.log(sequences)
+
+    const validLengthSequences = sequences.filter((localArr: number[]) => localArr.length === length)
+
+    return validLengthSequences;
 }
 
-console.log(findAdjacentNumbers(1, testInput))
 
-// almost forgot about this
-// need to look into MySQL upgrade preparations/strategy
+console.log(findAdjacentNumbers(3, testInput))
