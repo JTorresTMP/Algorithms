@@ -45,7 +45,7 @@ const findAdjacentNumbers = (length: number, series: number) => {
     for (let i = leftPointer; i < stringSeries.length; i++) {
         const localSequence: number[] = [];
         console.log(stringSeries[i])
-        while (isAdjacentNumber(stringSeries[leftPointer], stringSeries[rightPointer]))
+        // while (isAdjacentNumber(stringSeries[leftPointer], stringSeries[rightPointer]))
     }
 
     return;
