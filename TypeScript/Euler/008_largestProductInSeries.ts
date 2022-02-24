@@ -34,7 +34,8 @@ const isAdjacentNumber = (number1: number, number2: number) => {
     return Math.abs(number1 -  number2) <= 1;
 }
 
-const testInput = 7316717653133062491922511967442657474235534919493496983520312774506326239;
+const testInput = '79988930980968578099';
+
 
 const findAdjacentNumbers = (length: number, series: number | string) => {
     const sequences: number[][] = [];
@@ -44,20 +45,11 @@ const findAdjacentNumbers = (length: number, series: number | string) => {
 
     for (let i = leftPointer; i < stringSeries.length; i++) {
         const localSequence: number[] = [];
-        // console.log(`Current Index: ${i}`)
-        // console.log(`
-        // Current Left: ${leftPointer},
-        // Current Right: ${rightPointer}
-        // `)
-        while (isAdjacentNumber(parseInt(stringSeries[leftPointer]), parseInt(stringSeries[rightPointer]))) {
-            localSequence.push(parseInt(stringSeries[leftPointer]));
-            leftPointer++
-            // rightPointer = leftPointer + 1;
-        }
-        leftPointer = i + 1;
-        rightPointer = leftPointer + 1;
+        console.log(leftPointer, rightPointer)
+        console.log(`${stringSeries[leftPointer]} and ${stringSeries[rightPointer]} ${isAdjacentNumber(parseInt(stringSeries[leftPointer]), parseInt(stringSeries[rightPointer])) ? 'are adjacent' : 'are not adjacent'}`)
+        leftPointer++;
+        rightPointer++;
 
-        console.log(localSequence)
         localSequence.length > 1 ? sequences.push(localSequence) : null; // do nothing
     }
 
@@ -70,4 +62,4 @@ const findAdjacentNumbers = (length: number, series: number | string) => {
 }
 
 
-console.log(findAdjacentNumbers(7, massiveInput))
+console.log(findAdjacentNumbers(2, testInput))
