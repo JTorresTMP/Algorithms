@@ -63,3 +63,4 @@ const findAdjacentNumbers = (length: number, series: number | string) => {
 
 
 console.log(findAdjacentNumbers(2, testInput))
+// shameless
