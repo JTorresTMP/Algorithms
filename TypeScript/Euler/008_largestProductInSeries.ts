@@ -61,5 +61,5 @@ const findAdjacentNumbers = (length: number, series: number | string) => {
     return validLengthSequences;
 }
 
-// before I forget
+// before I head out
 console.log(findAdjacentNumbers(2, testInput))
