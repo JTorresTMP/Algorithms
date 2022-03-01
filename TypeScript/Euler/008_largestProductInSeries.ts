@@ -30,36 +30,55 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 
 const massiveInput = `7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450`
 
+
+/*
+yeah I was doing something else entirely smh, in my mind I was defining adjacent digits as numbers
+that have a delta of 1 or less, so 9989
+
+
 const isAdjacentNumber = (number1: number, number2: number) => {
     return Math.abs(number1 -  number2) <= 1;
 }
 
-const testInput = '79988930980968578099';
+const testInput = '799888099776';
 
 
-const findAdjacentNumbers = (length: number, series: number | string) => {
-    const sequences: number[][] = [];
-    const stringSeries = series.toString();
+const getSequences = (series: number | string, seqLength = 2) => {
+    const allSequences = [];
+    const stringifiedSeries = series.toString();
+
     let leftPointer = 0;
     let rightPointer = leftPointer + 1;
 
-    for (let i = leftPointer; i < stringSeries.length; i++) {
-        const localSequence: number[] = [];
-        console.log(leftPointer, rightPointer)
-        console.log(`${stringSeries[leftPointer]} and ${stringSeries[rightPointer]} ${isAdjacentNumber(parseInt(stringSeries[leftPointer]), parseInt(stringSeries[rightPointer])) ? 'are adjacent' : 'are not adjacent'}`)
-        leftPointer++;
-        rightPointer++;
+    for (let i = 0; i < stringifiedSeries.length; i++) {
+        // console.log(stringifiedSeries[i])
+        const localSequence = [stringifiedSeries[leftPointer]];
 
-        localSequence.length > 1 ? sequences.push(localSequence) : null; // do nothing
+        while (isAdjacentNumber(parseInt(stringifiedSeries[leftPointer]), parseInt(stringifiedSeries[rightPointer]))) {
+            localSequence.push(stringifiedSeries[rightPointer]);
+            leftPointer++;
+            rightPointer = leftPointer + 1;
+        }
+
+        leftPointer = i;
+        rightPointer = leftPointer + 1;
+
+        if (localSequence.length > 1) allSequences.push(localSequence);
     }
 
-    // console.log('All Sequences')
-    console.log(sequences)
+    console.log(allSequences)
 
-    const validLengthSequences = sequences.filter((localArr: number[]) => localArr.length === length)
+    const validSequences = allSequences.filter((localArr) => localArr.length === seqLength)
 
-    return validLengthSequences;
+    console.log(validSequences)
 }
 
-// cutting it kinda close
-console.log(findAdjacentNumbers(2, testInput))
+getSequences(massiveInput, 10)
+*/
+/*
+[9, 9, 8, 8, 8]
+[9, 8, 8, 8]
+[8, 8, 8]
+[8, 8]
+[9, 9]
+*/
