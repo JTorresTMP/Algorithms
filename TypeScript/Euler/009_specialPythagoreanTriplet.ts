@@ -10,4 +10,4 @@ Find the product abc.
 
 // pushing before I forget - have to fix qa db
 
-// fuck, this whole week man
+// don't want to miss a day
