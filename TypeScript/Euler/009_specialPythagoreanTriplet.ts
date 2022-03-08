@@ -8,6 +8,8 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 */
 
-// pushing before I forget - have to fix qa db
+/*
+First thing I need to do is identify all pythagorean triplets until sum is equal to 1000
 
-// don't want to miss
+Once I find those I just need to multiply them
+*/
