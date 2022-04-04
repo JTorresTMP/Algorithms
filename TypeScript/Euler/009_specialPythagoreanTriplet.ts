@@ -16,4 +16,4 @@ Once I find those I just need to multiply them
 // won't have time, rds upgrades
 // earliest push so far?
 
-// still sucks
+// last day on call thank god
