@@ -22,4 +22,4 @@ Once I find those I just need to multiply them
 
 // is it cached now?
 
-// rip
+// super quick
