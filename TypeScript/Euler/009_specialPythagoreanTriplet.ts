@@ -13,3 +13,5 @@ First thing I need to do is identify all pythagorean triplets until sum is equal
 
 Once I find those I just need to multiply them
 */
+
+//scuffed
