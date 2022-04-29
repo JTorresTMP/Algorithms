@@ -13,17 +13,3 @@ First thing I need to do is identify all pythagorean triplets until sum is equal
 
 Once I find those I just need to multiply them
 */
-// won't have time, rds upgrades
-// earliest push so far? 
-
-// I need to get on this
-
-// testing personal access tokens
-
-// is it cached now?
-
-// super quick
-
-// going to get back to this soon
-
-// actual migration tonight
