@@ -14,4 +14,37 @@ First thing I need to do is identify all pythagorean triplets until sum is equal
 Once I find those I just need to multiply them
 */
 
-// sucks
+/*
+This is not my code, but I thought it interesting to list the bruteForce approach and why it works.
+This code essentially checks all possible values of a and b, and calculates c to see if those numbers are a solution.
+
+This also leverages the fact that a < b < c.
+
+*/
+
+const bruteForce = () => {
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let target = 1000;
+    let found = false;
+
+    for (a = 1; a < (target / 3); a++) {
+        for (b = a; b < (target / 2); b++) {
+            c = target - a - b;
+
+            if (a * a + b * b === c * c) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            break;
+        }
+    }
+
+    console.log(a, b, c);
+    console.log(`The product of these numbers is ${a * b * c}`)
+}
+
+bruteForce();
