@@ -38,4 +38,4 @@ const summationOfPrimes = () => {
 
 console.log(summationOfPrimes());
 
-// This does not work currently, still doesn't
+// This does not work currently, still doesn't scuffed
