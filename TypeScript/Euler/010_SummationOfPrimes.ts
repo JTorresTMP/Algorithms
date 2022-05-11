@@ -38,4 +38,4 @@ const summationOfPrimes = () => {
 
 console.log(summationOfPrimes());
 
-// quick commit 
+// quick commit, will come back to this later
