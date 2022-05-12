@@ -38,4 +38,4 @@ const summationOfPrimes = () => {
 
 console.log(summationOfPrimes());
 
-// quick commit, will come back to this later need to learn window functions
+// before taking off
