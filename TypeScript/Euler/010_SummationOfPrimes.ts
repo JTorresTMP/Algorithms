@@ -37,5 +37,3 @@ const summationOfPrimes = () => {
 }
 
 console.log(summationOfPrimes());
-
-// before taking off
