@@ -38,4 +38,3 @@ const summationOfPrimes = () => {
 
 console.log(summationOfPrimes());
 
-// Saturday
