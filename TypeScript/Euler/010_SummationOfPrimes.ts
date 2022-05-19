@@ -38,4 +38,4 @@ const summationOfPrimes = () => {
 
 console.log(summationOfPrimes());
 
-// rip
+// scuffed
