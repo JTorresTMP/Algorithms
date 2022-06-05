@@ -35,4 +35,3 @@ const twoSum = (numbers: number[], target: number) => {
     
 }
 
-// quick push
