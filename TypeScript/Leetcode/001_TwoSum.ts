@@ -29,10 +29,28 @@ Constraints:
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 */
+/*
+The brute force approach is to loop through every element and for every element, loop through every subsequent element.
+This is O(n2), but it'll work
+
+*/
 
 
 const twoSum = (numbers: number[], target: number) => {
-    
+    let indices: any[] = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        let sum = numbers[i];
+
+        for (let j = i + 1; j < numbers.length - 1; j++) {
+            if (sum + numbers[j] === target) {
+                return [i, j]
+            }
+        }
+    }
+
+    return indices;
 }
 
-// almost forgot
+console.log(twoSum([2, 7, 11, 15], 9))
+console.log(twoSum([3, 2, 4], 6))
