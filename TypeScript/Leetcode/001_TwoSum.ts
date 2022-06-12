@@ -42,7 +42,7 @@ const twoSum = (numbers: number[], target: number) => {
     for (let i = 0; i < numbers.length; i++) {
         let sum = numbers[i];
 
-        for (let j = i + 1; j < numbers.length - 1; j++) {
+        for (let j = i + 1; j < numbers.length; j++) {
             if (sum + numbers[j] === target) {
                 return [i, j]
             }
@@ -52,5 +52,5 @@ const twoSum = (numbers: number[], target: number) => {
     return indices;
 }
 
-console.log(twoSum([2, 7, 11, 15], 9))
+// console.log(twoSum([2, 7, 11, 15], 9))
 console.log(twoSum([3, 2, 4], 6))
