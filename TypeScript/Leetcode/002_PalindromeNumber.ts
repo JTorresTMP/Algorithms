@@ -37,4 +37,4 @@ const isPalindromeNumber = (n: number): boolean => {
     return stringNumber === stringNumber.split('').reverse().join('');
 }
 
-// NOW SOLVE THIS WITHOUT TURNING THE NUMBER INTO A STRING
+// NOW SOLVE THIS WITHOUT TURNING THE NUMBER INTO A STRING  - been a while :(
